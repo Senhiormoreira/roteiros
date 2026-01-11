@@ -23,212 +23,161 @@
             <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
                 <i class="fas fa-search text-gray-400 text-xl"></i>
             </div>
-            <input type="text" id="barraPesquisa" onkeyup="filtrarRoteiros()" 
+            <input type="text" id="barraPesquisa" onkeyup="filtrarTexto()" 
                    class="w-full pl-14 pr-6 py-4 border border-gray-300 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm bg-gray-50" 
                    placeholder="Digite o nome do concurso...">
         </div>
     </section>
 
     <section class="py-10 px-2 w-full flex-grow">
-        <div class="max-w-[98%] mx-auto"> <h2 class="text-2xl font-bold text-gray-800 mb-8 pl-2 border-l-4 border-blue-900">Catálogo Completo</h2>
+        <div class="max-w-[98%] mx-auto"> 
             
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 pl-2 border-l-4 border-blue-900">Selecione o Estado</h2>
+
+            <div class="flex flex-wrap gap-2 mb-8" id="botoesFiltro">
+                <button onclick="filtrarEstado('TODOS')" class="px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-800 font-bold transition shadow-md">TODOS</button>
+                <button onclick="filtrarEstado('NACIONAL')" class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 font-bold transition shadow-md">NACIONAL</button>
+                <button onclick="filtrarEstado('BA')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">BA</button>
+                <button onclick="filtrarEstado('SP')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">SP</button>
+                <button onclick="filtrarEstado('MG')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">MG</button>
+                <button onclick="filtrarEstado('RJ')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">RJ</button>
+            </div>
+
+            <h2 class="text-xl font-semibold text-gray-600 mb-6" id="tituloSecao">Exibindo: Todos</h2>
+
             <div id="gradeRoteiros" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 
-                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200 border-l-4 border-yellow-500" data-uf="NACIONAL">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Civil MG</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Investigador e Escrivão.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Federal</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Delegado e Agente.</p>
+                    <span class="mb-4 inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-semibold w-fit">NACIONAL</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
 
-                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200 border-l-4 border-yellow-500" data-uf="NACIONAL">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Delegado Federal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Roteiro Elite Federal.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">PRF</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Policial Rodoviário Federal.</p>
+                    <span class="mb-4 inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-semibold w-fit">NACIONAL</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
 
-                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200 border-l-4 border-yellow-500" data-uf="NACIONAL">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Guarda Civil Municipal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Geral para prefeituras.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">CNU - Bloco 4</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Concurso Nacional Unificado.</p>
+                    <span class="mb-4 inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-semibold w-fit">NACIONAL</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
 
-                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200 border-l-4 border-yellow-500" data-uf="NACIONAL">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">INSS</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Técnico do Seguro Social.</p>
+                    <span class="mb-4 inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-semibold w-fit">NACIONAL</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="BA">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
                     <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Militar BA</h3>
                     <p class="text-gray-600 mb-6 flex-grow">Soldado PMBA.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">BAHIA</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
 
-                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="BA">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
                     <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Civil BA</h3>
                     <p class="text-gray-600 mb-6 flex-grow">Agente e Escrivão.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">BAHIA</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
 
-                 <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="BA">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Bombeiros BA</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Soldado e Oficial Bombeiro.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">BAHIA</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
- <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="BA">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
-                </div> <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200">
-                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
-                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
-                    <a href="LINK_AQUI" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">TJ Bahia</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Analista e Técnico Judiciário.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">BAHIA</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
-            </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="SP">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Civil SP</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Escrivão e Investigador.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">SÃO PAULO</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="SP">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Militar SP</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Soldado PMSP.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">SÃO PAULO</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="SP">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">TJ SP</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Escrevente Técnico Judiciário.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">SÃO PAULO</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="SP">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">GCM São Paulo</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Guarda Civil Metropolitana.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">SÃO PAULO</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="MG">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Civil MG</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Investigador e Delegado.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">MINAS GERAIS</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="MG">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Militar MG</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Soldado PMMG.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">MINAS GERAIS</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                 <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="MG">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Penal MG</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Agente Penitenciário.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">MINAS GERAIS</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="MG">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Bombeiros MG</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Curso de Formação de Oficiais.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">MINAS GERAIS</span>
+                    <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
+
+                </div>
             
-            <p id="msgNaoEncontrado" class="hidden text-center text-gray-500 mt-10 text-xl">Nenhum roteiro encontrado.</p>
+            <p id="msgNaoEncontrado" class="hidden text-center text-gray-500 mt-10 text-xl">Nenhum roteiro encontrado para este filtro.</p>
         </div>
     </section>
 
@@ -242,11 +191,32 @@
 
     <footer class="bg-black text-gray-400 py-8 px-4 text-center text-sm mt-auto">
         <p class="mb-2">&copy; 2026 Sr.Moreira. Todos os direitos reservados.</p>
-        
     </footer>
 
     <script>
-        function filtrarRoteiros() {
+        function filtrarEstado(estado) {
+            let cards = document.getElementsByClassName('roteiro-item');
+            let titulo = document.getElementById('tituloSecao');
+            
+            if(estado === 'TODOS') titulo.innerText = "Exibindo: Todos os Roteiros";
+            else if(estado === 'NACIONAL') titulo.innerText = "Exibindo: Concursos Nacionais";
+            else titulo.innerText = "Exibindo: Estado " + estado;
+
+            let achou = false;
+
+            for (let i = 0; i < cards.length; i++) {
+                let ufCard = cards[i].getAttribute('data-uf');
+                if (estado === 'TODOS' || ufCard === estado) {
+                    cards[i].style.display = ""; 
+                    achou = true;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+            verificarVazio(achou);
+        }
+
+        function filtrarTexto() {
             let filtro = document.getElementById('barraPesquisa').value.toUpperCase();
             let cards = document.getElementsByClassName('roteiro-item');
             let achou = false;
@@ -260,27 +230,23 @@
                     cards[i].style.display = "none";
                 }
             }
+            verificarVazio(achou);
+        }
+
+        function verificarVazio(encontrouAlgo) {
             let msg = document.getElementById('msgNaoEncontrado');
-            if (!achou) msg.classList.remove('hidden');
+            if (!encontrouAlgo) msg.classList.remove('hidden');
             else msg.classList.add('hidden');
         }
-    </script>
-<script>
-        // Bloqueia o Botão Direito do Mouse
-        document.addEventListener('contextmenu', event => event.preventDefault());
 
-        // Bloqueia Teclas de Atalho (F12, Ctrl+U, Inspeção)
+        // Bloqueios
+        document.addEventListener('contextmenu', event => event.preventDefault());
         document.onkeydown = function(e) {
-            // Bloqueia F12
-            if (e.keyCode == 123) { return false; }
-            // Bloqueia Ctrl+Shift+I (Inspecionar)
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
-            // Bloqueia Ctrl+Shift+C (Inspecionar Elemento)
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
-            // Bloqueia Ctrl+Shift+J (Console)
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
-            // Bloqueia Ctrl+U (Ver Código Fonte)
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+            if (e.keyCode == 123) return false;
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
         }
     </script>
 </body>
