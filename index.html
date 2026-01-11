@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Roteiros de Alta Performance</title>
+    
+    <style>
+        /* Animação suave de entrada (Fade In) */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-enter {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.2s; }
+        .delay-200 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans relative flex flex-col min-h-screen">
+
+    <header class="bg-gradient-to-br from-blue-900 via-blue-900 to-black text-white py-24 px-4 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute -top-20 -left-20 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-600 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight animate-enter">
+                Passe no Concurso dos Seus Sonhos com <span class="text-green-400">Metodologia Validada</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed opacity-0 animate-enter delay-100">
+Roteiros detalhados dia a dia para carreiras policiais, jurídicas e todos os concursos de nível nacional. Otimize seu tempo: estude apenas o que cai na prova.            </p>
+            <a href="#destaques" class="inline-block bg-green-500 hover:bg-green-400 text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-green-500/50 transition transform hover:-translate-y-1 hover:scale-105 uppercase tracking-wider opacity-0 animate-enter delay-200">
+                Quero ser aprovado
+            </a>
+        </div>
+    </header>
+
+    <section id="destaques" class="py-20 px-4 max-w-7xl mx-auto">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-blue-900 inline-block relative pb-2">
+                Roteiros em Destaque
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-green-500 rounded-full"></span>
+            </h2>
+            <p class="text-gray-500 mt-4 text-lg">Os materiais mais procurados pelos concurseiros de elite.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 border border-gray-100 overflow-hidden transform hover:-translate-y-2">
+                <div class="h-56 bg-gray-200 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-bold text-xl group-hover:scale-110 transition duration-500">
+                        <img src="img/pc.png" alt="Capa PCMG" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-bold text-2xl text-gray-800 mb-2 group-hover:text-blue-900 transition">Polícia Civil</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-2">Cronograma completo focado na Polícia Civil. Teoria e exercícios.</p>
+                    <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="block w-full bg-blue-900 hover:bg-blue-800 text-white text-center py-3 rounded-lg font-bold transition shadow-lg">
+                        Ver Detalhes
+                    </a>
+                </div>
+            </div>
+
+            <div class="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 border border-gray-100 overflow-hidden transform hover:-translate-y-2">
+                <div class="h-56 bg-gray-200 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-bold text-xl group-hover:scale-110 transition duration-500">
+                    <img src="img/dele.png" alt="Capa PCMG" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-bold text-2xl text-gray-800 mb-2 group-hover:text-blue-900 transition">Delegado</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-2">Preparação de elite para o cargo mais alto da PF/PC. Jurisprudência selecionada.</p>
+                    <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="block w-full bg-blue-900 hover:bg-blue-800 text-white text-center py-3 rounded-lg font-bold transition shadow-lg">
+                        Ver Detalhes
+                    </a>
+                </div>
+            </div>
+
+            <div class="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 border border-gray-100 overflow-hidden transform hover:-translate-y-2">
+                <div class="h-56 bg-gray-200 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center text-gray-400 font-bold text-xl group-hover:scale-110 transition duration-500">
+                    <img src="img/pm.png" alt="Capa PCMG" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-bold text-2xl text-gray-800 mb-2 group-hover:text-blue-900 transition">Polícia Militar</h3>
+                    <p class="text-gray-600 mb-6 line-clamp-2">O essencial para garantir sua farda na Polícia Militar. História, Geografia e Direito.</p>
+                     <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="block w-full bg-blue-900 hover:bg-blue-800 text-white text-center py-3 rounded-lg font-bold transition shadow-lg">
+                        Ver Detalhes
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-16">
+            <a href="todos-roteiros.html" class="inline-flex items-center gap-2 text-blue-900 font-bold text-lg hover:text-blue-700 transition border-b-2 border-blue-900 hover:border-blue-700 pb-1">
+                Ver todos os roteiros disponíveis <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+   <section class="bg-white py-20 px-4 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="w-48 h-48 bg-gray-200 rounded-full flex-shrink-0 flex items-center justify-center text-gray-400 font-bold border-4 border-white shadow-2xl overflow-hidden">
+            <img src="img/SENIORR.png" alt="Sr. Moreira" class="w-full h-full object-cover">
+        </div>
+        <div class="text-center md:text-left">
+            <h2 class="text-3xl font-bold mb-4 text-blue-900">Quem é o Sr.Moreira?</h2>
+            <p class="text-gray-600 text-lg leading-relaxed">
+                Especialista em preparação estratégica para concursos de nível nacional. Desenvolvi uma metodologia que elimina o excesso de informação e foca exclusivamente no que as bancas cobram.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <a href="https://www.instagram.com/senior_washington/" target="_blank" class="fixed bottom-6 left-6 z-50 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 hover:scale-110 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition transform duration-300">
+        <i class="fab fa-instagram text-2xl"></i>
+    </a>
+    <a href="https://wa.me/5581999173971" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 hover:scale-110 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition transform duration-300">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <footer class="bg-gray-900 text-gray-400 py-10 px-4 text-center text-sm border-t border-gray-800 mt-auto">
+        <p class="mb-2">&copy; 2026 Sr.Moreira. Todos os direitos reservados.</p>
+        
+    </footer>
+<script>
+        // Bloqueia o Botão Direito do Mouse
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Bloqueia Teclas de Atalho (F12, Ctrl+U, Inspeção)
+        document.onkeydown = function(e) {
+            // Bloqueia F12
+            if (e.keyCode == 123) { return false; }
+            // Bloqueia Ctrl+Shift+I (Inspecionar)
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+            // Bloqueia Ctrl+Shift+C (Inspecionar Elemento)
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
+            // Bloqueia Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+            // Bloqueia Ctrl+U (Ver Código Fonte)
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+        }
+    </script>
+</body>
+</html>
