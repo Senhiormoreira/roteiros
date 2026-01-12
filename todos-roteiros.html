@@ -37,16 +37,40 @@
             <div class="flex flex-wrap gap-2 mb-8" id="botoesFiltro">
                 <button onclick="filtrarEstado('TODOS')" class="px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-800 font-bold transition shadow-md">TODOS</button>
                 <button onclick="filtrarEstado('NACIONAL')" class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 font-bold transition shadow-md">NACIONAL</button>
+                <button onclick="filtrarEstado('AC')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">AC</button>
+                <button onclick="filtrarEstado('AL')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">AL</button>
+                <button onclick="filtrarEstado('AP')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">AP</button>
+                <button onclick="filtrarEstado('AM')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">AM</button>
                 <button onclick="filtrarEstado('BA')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">BA</button>
-                <button onclick="filtrarEstado('SP')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">SP</button>
+                <button onclick="filtrarEstado('CE')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">CE</button>
+                <button onclick="filtrarEstado('ES')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">ES</button>
+                <button onclick="filtrarEstado('GO')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">GO</button>
+                <button onclick="filtrarEstado('MA')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">MA</button>
+                <button onclick="filtrarEstado('MT')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">MT</button>
+                <button onclick="filtrarEstado('MS')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">MS</button>
                 <button onclick="filtrarEstado('MG')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">MG</button>
+                <button onclick="filtrarEstado('PA')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">PA</button>
+                <button onclick="filtrarEstado('PB')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">PB</button>
+                <button onclick="filtrarEstado('PR')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">PR</button>
+                <button onclick="filtrarEstado('PE')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">PE</button>
+                <button onclick="filtrarEstado('PI')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">PI</button>
                 <button onclick="filtrarEstado('RJ')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">RJ</button>
+                <button onclick="filtrarEstado('RN')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">RN</button>
+                <button onclick="filtrarEstado('RS')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">RS</button>
+                <button onclick="filtrarEstado('RO')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">RO</button>
+                <button onclick="filtrarEstado('RR')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">RR</button>
+                <button onclick="filtrarEstado('SC')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">SC</button>
+                <button onclick="filtrarEstado('SE')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">SE</button>
+                <button onclick="filtrarEstado('SP')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">SP</button>
+                <button onclick="filtrarEstado('TO')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">TO</button>
+                <button onclick="filtrarEstado('DF')" class="px-3 py-2 bg-white border border-gray-300 text-gray-700 rounded hover:bg-blue-100 font-bold transition">DF</button>
+
             </div>
 
             <h2 class="text-xl font-semibold text-gray-600 mb-6" id="tituloSecao">Exibindo: Todos</h2>
 
             <div id="gradeRoteiros" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                
+                                                             <!--NACIONAL-->
                 <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200 border-l-4 border-yellow-500" data-uf="NACIONAL">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
                     <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Federal</h3>
@@ -78,7 +102,7 @@
                     <span class="mb-4 inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded font-semibold w-fit">NACIONAL</span>
                     <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
-
+                                             <!--BA-->
                 <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="BA">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
                     <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Militar BA</h3>
@@ -110,7 +134,7 @@
                     <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">BAHIA</span>
                     <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
-
+                                                      <!--SP-->
                 <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="SP">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
                     <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Civil SP</h3>
@@ -142,7 +166,7 @@
                     <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">SÃO PAULO</span>
                     <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
-
+                            <!--MG-->
                 <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="MG">
                     <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
                     <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Polícia Civil MG</h3>
@@ -174,7 +198,14 @@
                     <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">MINAS GERAIS</span>
                     <a href="#" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
                 </div>
-
+                                         <!--RJ-->
+                                         <div class="roteiro-item bg-white p-5 rounded shadow-lg hover:shadow-2xl transition flex flex-col border border-gray-200" data-uf="RJ">
+                    <div class="h-48 bg-gray-200 rounded mb-4 overflow-hidden"><img src="img/em breve.png" alt="Capa" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+                    <h3 class="font-bold text-xl text-blue-900 mb-2 nome-roteiro">Tribunal de Justiça do Rio de Janeiro</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">TJRJ.</p>
+                    <span class="mb-4 inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold w-fit">RIO DE JANEIRO</span>
+                    <a href="https://pay.kiwify.com.br/AtauCFn" class="w-full block bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded font-bold text-lg uppercase tracking-wide">Comprar</a>
+                </div>
                 </div>
             
             <p id="msgNaoEncontrado" class="hidden text-center text-gray-500 mt-10 text-xl">Nenhum roteiro encontrado para este filtro.</p>
